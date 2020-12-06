@@ -43,7 +43,8 @@ body {
 }
 
 .Company-Name {
-  margin: 20 px;
+  position: relative;
+  left: 50px;
   color: white
 }
 
@@ -58,9 +59,26 @@ body {
 
 .comment-grid {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 20% 80%;
+}
+
+@media(max-width: 900px) {
+  .comment-grid {
+    grid-template-columns: 30% 70%;
+  }
+}
+
+@media(max-width: 700px) {
+  .comment-grid {
+    grid-template-columns: 100%;
+  }
 }
 
 .UserInfo-name {
   font-weight: bold;
+  color: white
+}
+
+.Comment-text {
+  color: #E5F8F5
 }
