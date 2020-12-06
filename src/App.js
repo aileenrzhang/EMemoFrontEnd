@@ -2,6 +2,8 @@ import './App.css';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Typography';
 import TypoGraphy from '@material-ui/core/Typography';
+import organizationPosts from './organizationPosts';
+import Forum from './Forum';
 
 function Company(props) {
   return (
@@ -13,7 +15,7 @@ function Company(props) {
 
 function Post(props) {
   return (
-    <div class="Comment">
+    <div class="Comment" onClick={() => this.getPosts("402881d0763a18a901763a19c70e0000")}>
       <div class="comment-grid">
         <div class="comment-left">
           <div class="UserInfo">
@@ -53,11 +55,11 @@ function App() {
       </AppBar>
 
       <Company name="The Blakery"></Company>
-
-      <Post name="Coding God" avatarUrl="https:via.placeholder.com/100" text="Wow I'm a coding god !!"/>
+      <Forum name="Coding God" avatarUrl="https:via.placeholder.com/100" text="Wow I'm a coding god !!" />
+      {/*<Post name="Coding God" avatarUrl="https:via.placeholder.com/100" text="Wow I'm a coding god !!"/>
       <Post name="Donair King" avatarUrl="https:via.placeholder.com/100" text="Wow I'm a Donair king !!"/>
       <Post name="Mandarin King" avatarUrl="https:via.placeholder.com/100" text="Wow I'm a Mandarin king !!"/>
-      <Post name="Evan" avatarUrl="https:via.placeholder.com/100" text="Wow I'm a whole ass clown !!"/>
+  <Post name="Evan" avatarUrl="https:via.placeholder.com/100" text="Wow I'm a whole ass clown !!"/>*/}
     </div>
   );
 }
