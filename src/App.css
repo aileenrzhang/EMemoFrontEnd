@@ -32,7 +32,30 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.Company-name {
+  margin: 20 px;
+}
+
+.Comment {
+  width: 60%;
+  border: 5px solid green;
+  padding: 50px;
+  margin: 20px;
+  margin-left: 50px;
+}
+
+
+.comment-grid {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.UserInfo-name {
+  font-weight: bold;
 }
