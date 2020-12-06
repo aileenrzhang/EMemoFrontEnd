@@ -6,9 +6,15 @@ class Forum extends Component {
         super(props)
 
         this.state = {
+            creating: false,
             posts: []
         }
 
+        this.createPost = this.createPost.bind(this);
+    }
+
+    createPost() {
+        this.setState({creating: true})
     }
 
     componentDidMount() {
@@ -19,6 +25,8 @@ class Forum extends Component {
     render() {
         return (
             <div>
+                <button onClick={this.createPost}>Create Post</button>
+                {(this.state.creating == true) && <p>hi</p>}
                 {
                     this.state.posts.map(post =>
                         <div class="Comment">
