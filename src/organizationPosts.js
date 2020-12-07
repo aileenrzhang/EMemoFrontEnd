@@ -6,6 +6,10 @@ class organizationPosts {
     getPosts(orgID) {
         return axios.get(this.apiUrl + orgID);
     }
+
+    post(orgID, post) {
+        return axios.post(this.apiUrl + orgID, post);
+    }
 }
 
 export default new organizationPosts();
