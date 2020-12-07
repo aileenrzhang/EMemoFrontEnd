@@ -44,7 +44,8 @@ function Post(props) {
 function App() {
   return (
     <div>
-      <AppBar color="primary" position="static">
+      <AppBar position="static"
+      style={{ background: '#2E3B55' }}>
         <Toolbar>
           <TypoGraphy variant="title"
             color="inherit"
