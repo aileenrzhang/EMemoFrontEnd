@@ -37,12 +37,11 @@ class Forum extends Component {
             userID: "402881d0763a1c0601763a1c82bd0000"
         }
 
-        let newPosts = this.state.posts;
-        newPosts.push(post);
-
-        this.setState({posts: newPosts})
-
-        organizationPosts.post("402881d0763a18a901763a19c70e0000", post);
+        organizationPosts.post("402881d0763a18a901763a19c70e0000", post).then(res => {
+            organizationPosts.getPosts("402881d0763a18a901763a19c70e0000").then(res => {
+                this.setState({ posts: res.data })
+            })
+        });
     }
 
     changeHandler = e => {
