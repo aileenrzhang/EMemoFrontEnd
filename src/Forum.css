@@ -1,0 +1,26 @@
+.textform {
+    position: relative;
+    left: 50px;
+    margin: 20px;
+}
+
+.CreatePost {
+    position: relative;
+    left: 50px;
+    padding: 20px;
+}
+
+.postButtonTitle {
+    color: white;
+}
+
+.contentButtonTitle {
+    color: white;
+    margin-top: 20px;
+}
+
+.contentInputBox {
+    margin: 10px;
+    padding-bottom: 150px;
+    width: 70%;
+}

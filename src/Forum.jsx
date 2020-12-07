@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import organizationPosts from './organizationPosts';
+import './Forum.css';
 
 class Forum extends Component {
     constructor(props) {
@@ -29,18 +30,18 @@ class Forum extends Component {
         let newPosts = this.state.posts;
         newPosts.push(post);
 
-        this.setState({posts: newPosts})
+        this.setState({ posts: newPosts })
 
         organizationPosts.post("402881d0763a18a901763a19c70e0000", post);
     }
 
     changeHandler = e => {
-        const {name, value} = e.target;
-        this.setState({ [name]: value});
+        const { name, value } = e.target;
+        this.setState({ [name]: value });
     }
 
     createPost() {
-        this.setState({creating: true})
+        this.setState({ creating: true })
     }
 
     componentDidMount() {
@@ -51,16 +52,22 @@ class Forum extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.createPost}>Create Post</button>
-                {(this.state.creating == true) && 
-                <form className="textform">
-                    <label>Title: </label>
-                    <input placeholder="Title" name="title" value={this.state.title} onChange={this.changeHandler} required />
+                <button className="CreatePost" onClick={this.createPost}>Create Post</button>
+                {(this.state.creating == true) &&
+                    <form className="textform">
+                        <div className="postButtonTitle">
+                            <label>Title: </label>
+                            <input placeholder="Title" name="title" value={this.state.title} onChange={this.changeHandler} required />
+                        </div>
 
-                    <label>Content: </label>
-                    <input placeholder="Content" name="content" value={this.state.content} onChange={this.changeHandler} required />
-                    <button onClick={this.submit}>Post</button>
-                </form>
+                        <div className="contentButtonTitle">
+                            <label>Content: </label>
+                            <div class="contentInput">
+                                <input class="contentInputBox" placeholder="Content" name="content" value={this.state.content} onChange={this.changeHandler} required />
+                            </div>
+                        </div>
+                        <button onClick={this.submit}>Post</button>
+                    </form>
                 }
                 {
                     this.state.posts.map(post =>
