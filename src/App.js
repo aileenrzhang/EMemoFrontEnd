@@ -63,7 +63,6 @@ function App() {
 
       <Company name="The Blakery"></Company>
       <Forum name="Coding God" avatarUrl="https:via.placeholder.com/100" text="Wow I'm a coding god !!" />
-      <Post name="Evan" avatarUrl="https:via.placeholder.com/100" text="Wow I'm a whole ass clown !!"/>
       {/*<Post name="Coding God" avatarUrl="https:via.placeholder.com/100" text="Wow I'm a coding god !!"/>
       <Post name="Donair King" avatarUrl="https:via.placeholder.com/100" text="Wow I'm a Donair king !!"/>
       <Post name="Mandarin King" avatarUrl="https:via.placeholder.com/100" text="Wow I'm a Mandarin king !!"/>
