@@ -16,6 +16,17 @@ class Forum extends Component {
         this.createPost = this.createPost.bind(this);
         this.changeHandler = this.changeHandler.bind(this);
         this.submit = this.submit.bind(this);
+        this.delete = this.delete.bind(this);
+    }
+
+    delete = e => {
+        e.preventDefault();
+        organizationPosts.delete("402881d0763a18a901763a19c70e0000", e.target.id).then(res => {
+            organizationPosts.getPosts("402881d0763a18a901763a19c70e0000").then(res => {
+                this.setState({ posts: res.data })
+            })
+        })
+
     }
 
     submit = e => {
@@ -32,7 +43,11 @@ class Forum extends Component {
 
         this.setState({ posts: newPosts })
 
-        organizationPosts.post("402881d0763a18a901763a19c70e0000", post);
+        organizationPosts.post("402881d0763a18a901763a19c70e0000", post).then(res => {
+            organizationPosts.getPosts("402881d0763a18a901763a19c70e0000").then(res => {
+                this.setState({ posts: res.data })
+            })
+        });
     }
 
     changeHandler = e => {
@@ -88,7 +103,9 @@ class Forum extends Component {
                                     <div class="Comment-text">
                                         {post.content}
                                     </div>
+
                                 </div>
+                                <button id={post.id} onClick={this.delete}>Delete</button>
                             </div>
                         </div>
                     )

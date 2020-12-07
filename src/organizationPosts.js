@@ -10,6 +10,10 @@ class organizationPosts {
     post(orgID, post) {
         return axios.post(this.apiUrl + orgID, post);
     }
+
+    delete(orgID, id) {
+        return axios.delete(this.apiUrl + orgID + "/" + id);
+    }
 }
 
 export default new organizationPosts();
