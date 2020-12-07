@@ -56,7 +56,7 @@ class Forum extends Component {
     }
 
     createPost() {
-        this.setState({ creating: true })
+        this.setState({ creating: !this.state.creating })
     }
 
     componentDidMount() {
