@@ -38,6 +38,13 @@
   }
 }
 
+.eMemoText {
+  padding: 5px;
+  padding-left: 20px;
+  background: #2E3B55;
+  color: white;
+}
+
 body {
   background-color: #1A1A1D
 }

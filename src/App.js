@@ -44,16 +44,22 @@ function Post(props) {
 function App() {
   return (
     <div>
-      <AppBar position="static"
+      <div class="eMemoText">
+        <p>Welcome to eMemo -- Building Employer-Employee Relationships since 2020 :)</p>
+      </div>
+
+      {/* <AppBar position="static"
       style={{ background: '#2E3B55' }}>
         <Toolbar>
           <TypoGraphy variant="title"
             color="inherit"
           >
-            Welcome to eMemo!
+            <div class="eMemoText">
+              <p>Welcome to eMemo -- Building Employer--Employee Relationships since 2020 :)</p>
+            </div>
           </TypoGraphy>
         </Toolbar>
-      </AppBar>
+      </AppBar> */}
 
       <Company name="The Blakery"></Company>
       <Forum name="Coding God" avatarUrl="https:via.placeholder.com/100" text="Wow I'm a coding god !!" />

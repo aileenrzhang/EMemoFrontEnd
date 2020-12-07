@@ -105,7 +105,7 @@ class Forum extends Component {
                                     </div>
 
                                 </div>
-                                <button id={post.id} onClick={this.delete}>Delete</button>
+                                <button class="deleteButton" id={post.id} onClick={this.delete}>Delete</button>
                             </div>
                         </div>
                     )
